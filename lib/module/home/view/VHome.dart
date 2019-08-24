@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../../news/model/MNews.dart';
+import '../../news/view/VNews.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -13,7 +17,10 @@ class Home extends StatelessWidget {
                 child: Container(),
               ),
               Container(
-                child: Container(),
+                child: ChangeNotifierProvider<MNews>(
+                  builder: (_) => MNews(),
+                  child: VNews(),
+                ),
               ),
               Container(
                 child: Container(),
