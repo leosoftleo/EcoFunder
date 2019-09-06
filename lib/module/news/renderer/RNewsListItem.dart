@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../controller/CNews.dart';
 import '../object/ONews.dart';
 import '../styles/SNews.dart';
 
@@ -53,7 +54,9 @@ class RNewsListItem extends StatelessWidget {
           ),
           elevation: 2.0,
         ),
-        onTap: (){},
+        onTap: (){
+          openBrowser(data.link);
+        },
       ),
     );
   }
