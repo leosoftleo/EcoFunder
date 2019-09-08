@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../../news/model/MNews.dart';
 import '../../news/view/VNews.dart';
+import '../../explore/view/VExploreList.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -14,7 +15,7 @@ class Home extends StatelessWidget {
           body: TabBarView(
             children: [
               Container(
-                child: Container(),
+                child: VExploreList(),
               ),
               Container(
                 child: ChangeNotifierProvider<MNews>(

@@ -1,0 +1,133 @@
+{
+	"projects": [
+		{
+			"name": "Planting Trees in Amazon Rainforest",
+			"description": "To reduce the carbon footprint, we plant a tree while cutting a tree.",
+			"company_name": "Coco Furniture Limited",
+			"photo": "lib/module/explore/assets/photos/1.jpg",
+			"total_milestone": 3,
+			"complete_milestone": 1,
+			"investor_count": 3,
+			"daysLefts_count": 25,
+			"investment": "10,000",
+			"expected_return": "20,000",
+			"milestone": [
+				{
+					"date": "10ᵗʰ June, 2019",
+					"target": 0,
+					"target_description": "Planting One Thousand Trees",
+					"rewards": 1000
+				},
+				{
+					"date": "24ᵗʰ June, 2019",
+					"target": 1,
+					"target_description": "Planting Ten Thousand Trees",
+					"rewards": 3000
+				},
+				{
+					"date": "14ᵗʰ July, 2019",
+					"target": 1,
+					"target_description": "Planting Fifty Thousand Trees",
+					"rewards": 6000
+				}
+			]
+		},
+		{
+			"name": "Saving Indo-Pacific Humpback Dolphin",
+			"description": "Recently, we have a plan on protecting Hong Kong animals. We cooperating with Hong Kong Park to build a protection zone to take care of this beautiful animal.",
+			"company_name": "Aloha Construction",
+			"photo": "lib/module/explore/assets/photos/2.jpg",
+			"total_milestone": 3,
+			"complete_milestone": 2,
+			"investor_count": 6,
+			"daysLefts_count": 11,
+			"investment": "34,000",
+			"expected_return": "40,000",
+			"milestone": [
+				{
+					"date": "24ᵗʰ June, 2019",
+					"target": 0,
+					"target_description": "Build Protection Zone",
+					"rewards": 10000
+				},
+				{
+					"date": "25ᵗʰ July, 2019",
+					"target": 1,
+					"target_description": "Build Protection Zone",
+					"rewards": 10000
+				},
+				{
+					"date": "5ᵗʰ August, 2019",
+					"target": 1,
+					"target_description": "Build Protection Zone",
+					"rewards": 12000,
+					"expired_date": "30-9-2019"
+				}
+			]
+		},
+		{
+			"name": "Developing New Energy",
+			"description": "We are scientist who are researching on new energy source. This is a cutting edge energy by using bio energy of human. There will be further planning if this initial stage is success.",
+			"company_name": "Inno Energy",
+			"photo": "lib/module/explore/assets/photos/3.jpg",
+			"total_milestone": 3,
+			"complete_milestone": 2,
+			"investor_count": 1,
+			"daysLefts_count": 56,
+			"investment": "9,000",
+			"expected_return": "15,000",
+			"milestone": [
+				{
+					"date": "13ᵗʰ June, 2019",
+					"target": 0,
+					"target_description": "Initial Research",
+					"rewards": 1000
+				},
+				{
+					"date": "1ˢᵗ January, 2021",
+					"target": 1,
+					"target_description": "Power Plant Building",
+					"rewards": 2000
+				},
+				{
+					"date": "23ᵗʰ June, 2021",
+					"target": 1,
+					"target_description": "Testing and Deployment",
+					"rewards": 6000
+				}
+			]
+		},
+		{
+			"name": "Energy Sector Improvement Project",
+			"description": "The proposed Project is intended to support two key dimensions of energy sector transformation in Tunisia: (i) diversifying sources of electricity away from imported hydrocarbons by helping integrate and transmit lower-cost, privately-produced renewables-based generation capacity; and (ii) improving STEG’s financial health by strengthening its commercial performance. Accordingly, the Project is articulated along the following two components.",
+			"company_name": "Ministry of Finance;STEG;",
+			"photo": "lib/module/explore/assets/photos/4.jpg",
+			"total_milestone": 3,
+			"complete_milestone": 0,
+			"investor_count": 8,
+			"daysLefts_count": 86,
+			"investment": "3,000",
+			"expected_return": "8,000",
+			"milestone": [
+				{
+					"date": "15ᵗʰ May, 2019",
+					"target": 0,
+					"target_description": "Oil and Gas",
+					"rewards": 1000
+				},
+				{
+					"date": "30ᵗʰ June, 2019",
+					"target": 1,
+					"target_description": "Public Administration - Energy and Extractives",
+					"rewards": 1000
+				},
+				{
+					"date": "19ᵗʰ July, 2019",
+					"target": 1,
+					"target_description": "Energy Transmission and Distribution",
+					"rewards": 1000
+				}
+			]
+		}
+	]
+}
