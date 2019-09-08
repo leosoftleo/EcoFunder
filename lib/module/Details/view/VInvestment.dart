@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../home/view/VHome.dart';
+
+//import '../../home/view/VHome.dart';
 
 class VInvestment extends StatelessWidget {
   VInvestment(this.projectName, this.companyName);
@@ -47,10 +48,11 @@ class VInvestment extends StatelessWidget {
                         style: TextStyle(color: Color(0xFFFFFFFF)),
                       ),
                       onPressed: () {
-                        Navigator.push(
+                        Navigator.popUntil(context,ModalRoute.withName('/'));
+                       /* Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => VHome()),
-                        );
+                        );*/
                       },
                     ))
               ],

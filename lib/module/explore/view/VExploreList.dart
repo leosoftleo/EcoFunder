@@ -2,10 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-import '../controller/CExplore.dart';
 import '../renderer/RExploreCard.dart';
-import '../../Details/views/VDetails.dart';
-//import '../../details/views/VDetails.dart';
+import '../../details/view/VDetails.dart';
+import '../../../app/controller/CApp.dart';
 
 class VExploreList extends StatefulWidget {
   @override
