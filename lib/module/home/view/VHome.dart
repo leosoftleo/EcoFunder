@@ -5,7 +5,7 @@ import '../../news/model/MNews.dart';
 import '../../news/view/VNews.dart';
 import '../../explore/view/VExploreList.dart';
 
-class Home extends StatelessWidget {
+class VHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

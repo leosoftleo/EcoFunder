@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../controller/CExplore.dart';
 import '../renderer/RExploreCard.dart';
+import '../../Details/views/VDetails.dart';
 //import '../../details/views/VDetails.dart';
 
 class VExploreList extends StatefulWidget {
@@ -104,7 +105,7 @@ ListView createListView(ScrollController sc, dynamic data) {
         onTap: () {
           Navigator.push(
             context,
-            null, //MaterialPageRoute(builder: (context) => VDetails(data[index])),
+            MaterialPageRoute(builder: (context) => VDetails(data[index])),
           );
         },
       );
