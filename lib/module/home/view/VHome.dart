@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../../news/model/MNews.dart';
 import '../../news/view/VNews.dart';
 import '../../explore/view/VExploreList.dart';
+import '../../search/view/VSearch.dart';
 
 class VHome extends StatelessWidget {
   @override
@@ -24,7 +25,7 @@ class VHome extends StatelessWidget {
                 ),
               ),
               Container(
-                child: Container(),
+                child: VSearch(),
               ),
               Container(
                 child: Container(),
