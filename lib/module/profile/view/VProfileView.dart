@@ -1,3 +1,4 @@
+import 'package:eco_funder/module/profile/view/VProfileEdit.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
@@ -10,9 +11,8 @@ import '../../profile/styles/SProfile.dart';
 class VProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return Scaffold(
 
+    return Scaffold(
       body: Container(
         color: Colors.white,
         child: Column(
@@ -90,7 +90,12 @@ class VProfileView extends StatelessWidget {
                       ),
                     ),
                     onTap: () {
-                      //TODO(Jayant): Edit form
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => VProfileEdit()
+                          )
+                      );
                     },
                   )
                 ],
@@ -205,29 +210,25 @@ class VProfileView extends StatelessWidget {
                 ),
               ],
             ),
-            Stack(
-              children: <Widget>[
-
-                Container(
-                  alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.all(12),
-                  child: Text(
-                    "Recent Activity",
-                    style: SProfile.p_desc_ts,
-                    textAlign: TextAlign.start,
+            Container(
+              margin: EdgeInsets.only(bottom: 5),
+              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.all(12),
+              child: Text(
+                "Recent Activity",
+                style: SProfile.p_desc_ts,
+                textAlign: TextAlign.start,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: <BoxShadow>[
+                  BoxShadow(
+                    color: Colors.black26,
+                    offset: Offset(0.0, 3.0),
+                    blurRadius: 1.0,
                   ),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    boxShadow: <BoxShadow>[
-                      BoxShadow(
-                        color: Colors.black26,
-                        offset: Offset(0.0, 3.0),
-                        blurRadius: 1.0,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
             Expanded(
               child: Container(
