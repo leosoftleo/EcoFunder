@@ -1,9 +1,11 @@
+import 'package:eco_funder/module/profile/view/VProfileView.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class VProfileEdit extends StatelessWidget {
 
-  final FocusNode focus = new FocusNode();
-  final TextEditingController textController = new TextEditingController();
+  final TextEditingController nameController = new TextEditingController();
+  final TextEditingController descController = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,13 @@ class VProfileEdit extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(left: 15, right: 15),
               padding: EdgeInsets.all(6),
-              child: TextField(decoration: null,),
+              child: TextField(
+                controller: nameController,
+                decoration: new InputDecoration(
+                  border: InputBorder.none,
+                  hintText: VProfileView.name,
+              ),
+              ),
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.black12, width: 0.5),
               ),
@@ -40,7 +48,11 @@ class VProfileEdit extends StatelessWidget {
               margin: EdgeInsets.only(left: 15, right: 15),
               padding: EdgeInsets.all(6),
               child: TextField(
-                decoration: null,
+                controller: descController,
+                decoration: new InputDecoration(
+                  border: InputBorder.none,
+                  hintText: VProfileView.desc,
+                ),
                 minLines: 5,
                 maxLines: 10,
               ),
@@ -55,7 +67,7 @@ class VProfileEdit extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
                   child: Text(
-                    "Save",
+                    'Save',
                     style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600,),
                     textAlign: TextAlign.center,
                   ),
@@ -79,6 +91,7 @@ class VProfileEdit extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
+                  _save();
                   Navigator.pop(context);
                 },
               ),
@@ -90,6 +103,14 @@ class VProfileEdit extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  _save() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    if (nameController.text!='')
+      await prefs.setString('name', nameController.text);
+    if (descController.text!='')
+      await prefs.setString('desc', descController.text);
   }
 
 }

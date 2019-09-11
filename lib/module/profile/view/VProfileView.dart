@@ -1,5 +1,6 @@
 import 'package:eco_funder/module/profile/view/VProfileEdit.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 
 import '../../../app/controller/CApp.dart';
@@ -9,8 +10,22 @@ import '../../profile/renderer/RProfileActivityCard.dart';
 import '../../profile/styles/SProfile.dart';
 
 class VProfileView extends StatelessWidget {
+
+  static String name = 'Takishima Kei';
+  static String desc = 'Actor • Model • Investor \n I\'ll be testing the design of this app!';
+
+  _getProfile() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    if (prefs.getString('name')!=null)
+      name = prefs.getString('name');
+    if (prefs.getString('desc')!=null)
+      desc = prefs.getString('desc');
+  }
+
   @override
   Widget build(BuildContext context) {
+
+    _getProfile();
 
     return Scaffold(
       body: Container(
@@ -104,7 +119,7 @@ class VProfileView extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(top: 12),
               child: Text(
-                "Takishima Kei",
+                name,
                 style: SProfile.p_name_ts,
                 textAlign: TextAlign.center,
               ),
@@ -112,7 +127,7 @@ class VProfileView extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(top: 6, bottom: 12),
               child: Text(
-                "Actor • Model • Investor\nI'll be testing the design of this app.",
+                desc,
                 style: SProfile.p_desc_ts,
                 textAlign: TextAlign.center,
               ),
