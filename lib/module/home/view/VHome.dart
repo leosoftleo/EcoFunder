@@ -6,6 +6,8 @@ import '../../news/model/MNews.dart';
 import '../../news/view/VNews.dart';
 import '../../profile/model/MProfile.dart';
 import '../../profile/view/VProfile.dart';
+import '../../explore/view/VExploreList.dart';
+import '../../search/view/VSearchHome.dart';
 
 class VHome extends StatelessWidget {
   @override
@@ -26,7 +28,7 @@ class VHome extends StatelessWidget {
                 ),
               ),
               Container(
-                child: Container(),
+                child: VSearchHome(),
               ),
               Container(
                 child: ChangeNotifierProvider<MProfile>(
