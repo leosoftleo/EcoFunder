@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../details/view/VDetails.dart';
 
 class RSearch {
