@@ -16,7 +16,7 @@ class VNewsView extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             'News',
-            style: TextStyle(color: Color(0xFF3361CA), fontSize: 36),
+            style: TextStyle(color: Color(0xFF3361CA), fontSize: 32),
           ),
           backgroundColor: Colors.white,
         ),

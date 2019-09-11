@@ -22,7 +22,7 @@ class _ExploreList extends State<VExploreList> {
         appBar: AppBar(
           title: Text(
             'Explore',
-            style: TextStyle(color: Color(0xFF3361CA), fontSize: 36),
+            style: TextStyle(color: Color(0xFF3361CA), fontSize: 32),
           ),
           bottom: TabBar(
             labelColor: Color(0xFF3361CA),
