@@ -1,6 +1,8 @@
-import 'package:eco_funder/module/profile/view/VProfileView.dart';
+
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'VProfileView.dart';
 
 class VProfileEdit extends StatelessWidget {
 
