@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../explore/view/VExploreList.dart';
 import '../../news/model/MNews.dart';
 import '../../news/view/VNews.dart';
-import '../../explore/view/VExploreList.dart';
+import '../../profile/model/MProfile.dart';
+import '../../profile/view/VProfile.dart';
 import '../../search/view/VSearchHome.dart';
 
 class VHome extends StatelessWidget {
@@ -28,7 +30,10 @@ class VHome extends StatelessWidget {
                 child: VSearchHome(),
               ),
               Container(
-                child: Container(),
+                child: ChangeNotifierProvider<MProfile>(
+                  builder: (_) => MProfile(),
+                  child: VProfile(),
+                ),
               ),
             ],
           ),
@@ -44,7 +49,7 @@ class VHome extends StatelessWidget {
                   icon: Icon(Icons.explore),
                 ),
                 Tab(
-                  icon: Icon(Icons.whatshot),
+                  icon: Icon(Icons.web),
                 ),
                 Tab(
                   icon: Icon(Icons.search),
@@ -53,9 +58,9 @@ class VHome extends StatelessWidget {
                   icon: Icon(Icons.person_outline),
                 )
               ],
-              labelColor: Color(0xFF3361CA),
+              labelColor: Colors.deepPurple,
               unselectedLabelColor: Colors.grey,
-              indicatorColor: Color(0xFF3361CA),
+              indicatorColor: Colors.deepPurple,
             ),
           )),
     );
