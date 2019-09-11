@@ -1,12 +1,11 @@
-
+import 'package:flutter/material.dart';
 import 'dart:convert';
 
-import 'package:eco_funder/app/controller/CApp.dart';
-import 'package:eco_funder/module/profile/model/MProfile.dart';
-import 'package:eco_funder/module/profile/renderer/RProfileActivityCard.dart';
-import 'package:flutter/material.dart';
+import '../../../app/controller/CApp.dart';
 
-import 'package:eco_funder/module/profile/styles/SProfile.dart';
+import '../../profile/model/MProfile.dart';
+import '../../profile/renderer/RProfileActivityCard.dart';
+import '../../profile/styles/SProfile.dart';
 
 class VProfileView extends StatelessWidget {
   @override
