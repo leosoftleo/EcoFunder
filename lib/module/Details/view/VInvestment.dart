@@ -48,11 +48,7 @@ class VInvestment extends StatelessWidget {
                         style: TextStyle(color: Color(0xFFFFFFFF)),
                       ),
                       onPressed: () {
-                        Navigator.popUntil(context,ModalRoute.withName('/'));
-                       /* Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => VHome()),
-                        );*/
+                        Navigator.popUntil(context,ModalRoute.withName('/home'));
                       },
                     ))
               ],

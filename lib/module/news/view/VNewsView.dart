@@ -14,8 +14,9 @@ class VNewsView extends StatelessWidget {
     print(data[6].imageUrl);
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text(
-            'News',
+            'News Highlight',
             style: TextStyle(color: Color(0xFF3361CA), fontSize: 32),
           ),
           backgroundColor: Colors.white,

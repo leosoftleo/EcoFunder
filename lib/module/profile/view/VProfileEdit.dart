@@ -16,8 +16,8 @@ class VProfileEdit extends StatelessWidget {
         title: Text("Edit Profile"),
       ),
       body: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
+          //crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
               margin: EdgeInsets.only(top: 20, left: 15, right: 15, bottom: 10),

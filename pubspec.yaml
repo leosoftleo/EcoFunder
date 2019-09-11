@@ -63,6 +63,7 @@ flutter:
     - lib/app/assets/data/
     - lib/module/explore/assets/photos/
     - lib/module/Details/assets/photos/
+    - lib/app/assets/image/
 
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg

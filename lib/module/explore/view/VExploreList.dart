@@ -20,6 +20,7 @@ class _ExploreList extends State<VExploreList> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text(
             'Explore',
             style: TextStyle(color: Color(0xFF3361CA), fontSize: 32),
