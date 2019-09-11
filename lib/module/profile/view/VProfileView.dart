@@ -1,5 +1,9 @@
 
+import 'dart:convert';
+
+import 'package:eco_funder/app/controller/CApp.dart';
 import 'package:eco_funder/module/profile/model/MProfile.dart';
+import 'package:eco_funder/module/profile/renderer/RProfileActivityCard.dart';
 import 'package:flutter/material.dart';
 
 import 'package:eco_funder/module/profile/styles/SProfile.dart';
@@ -21,7 +25,7 @@ class VProfileView extends StatelessWidget {
                 alignment: Alignment.topCenter,
                 children: <Widget>[
                   Container(
-                    height: 200,
+                    height: 150,
                     decoration: BoxDecoration(
                       // Box decoration takes a gradient
                       gradient: LinearGradient(
@@ -42,7 +46,7 @@ class VProfileView extends StatelessWidget {
                   ),
                   GestureDetector(
                     child: Container(
-                      margin: EdgeInsets.only(top: 100),
+                      margin: EdgeInsets.only(top: 75),
                       width: 150,
                       height: 150,
                       decoration: BoxDecoration(
@@ -70,7 +74,7 @@ class VProfileView extends StatelessWidget {
                   GestureDetector(
                     child: Container(
                       alignment: Alignment.centerRight,
-                      margin: EdgeInsets.only(top: 200),
+                      margin: EdgeInsets.only(top: 150),
                       padding: EdgeInsets.all(6),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -204,11 +208,7 @@ class VProfileView extends StatelessWidget {
             ),
             Stack(
               children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
-                ),
+
                 Container(
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.all(12),
@@ -230,9 +230,50 @@ class VProfileView extends StatelessWidget {
                 ),
               ],
             ),
+            Expanded(
+              child: Container(
+                child: FutureBuilder<dynamic>(
+                    future: get_project_data(),
+                    builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
+                      if (snapshot.hasData) {
+                        dynamic new_data = json.decode(snapshot.data);
+                        // tab is the index for tabItem
+                        List<dynamic> dates = new_data['projects'];
+                        return createListView(dates);
+                      } else {
+                        return Container(
+                          width: 0,
+                          height: 0,
+                        );
+                      }
+                    }
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
+              ),
+            ),
           ],
         )
       ),
+    );
+  }
+
+  ListView createListView(dynamic data) {
+    return ListView.builder(
+      itemBuilder: (BuildContext context, int index) {
+        return GestureDetector(
+          child: RProfileActivityCard(data[index], context).exploreListCard,
+          // on Tap shows details page
+          onTap: () {
+            /*Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => VDetails(data[index])),
+            );*/
+          },
+        );
+      },
+      itemCount: data == null ? 0 : data.length,
     );
   }
 
