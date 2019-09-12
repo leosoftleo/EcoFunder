@@ -7,7 +7,7 @@ Future<List<dynamic>> search_result(String keyword) async {
   get_project_data().then((String val) {
     dynamic data = json.decode(val);
     for (int i = 0; i < data['projects'].length; i++) {
-      if (data['projects'][i]['name'].contains(keyword)) result.add(data['projects'][i]);
+      if (data['projects'][i]['name'].toLowerCase().contains(keyword.toLowerCase())) result.add(data['projects'][i]);
     }
   });
   return result;
