@@ -12,7 +12,7 @@ class VProfileEdit extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.blueAccent,
         title: Text("Edit Profile"),
       ),
       body: Container(
@@ -82,10 +82,10 @@ class VProfileEdit extends StatelessWidget {
                       stops: [0.1, 0.4, 0.6, 1],
                       colors: [
                         // Colors are easy thanks to Flutter's Colors class.
-                        Colors.purple[400],
-                        Colors.purple[700],
-                        Colors.purple[800],
-                        Colors.purple[900],
+                        Colors.blue[400],
+                        Colors.blue[700],
+                        Colors.blue[800],
+                        Colors.blue[900],
                       ],
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(25)),
