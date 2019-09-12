@@ -21,34 +21,38 @@ class VNewsView extends StatelessWidget {
           ),
           backgroundColor: Colors.white,
         ),
-        body: Column(
-          children: <Widget>[
-            Container(
-              color: Color(0xFFFFFFFF),
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                color: Colors.white,
-                height: 200.0,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: <Widget>[
-                    RNewsListItemScrollable(data[0]),
-                    RNewsListItemScrollable(data[1]),
-                    RNewsListItemScrollable(data[2]),
-                    RNewsListItemScrollable(data[3]),
-                  ],
+        body: Container(
+          child: Column(
+            children: <Widget>[
+              Container(
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 200.0,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      RNewsListItemScrollable(data[0]),
+                      RNewsListItemScrollable(data[1]),
+                      RNewsListItemScrollable(data[2]),
+                      RNewsListItemScrollable(data[3]),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Expanded(
-              child: ListView.builder(
-                itemCount: data.length - 4,
-                itemBuilder: (BuildContext context, int index){
-                  return RNewsListItem(data[4 + index]);
-                },
-              ),
-            ) 
-          ],
-        ));
+              Expanded(
+                child: ListView.builder(
+                  itemCount: data.length - 4,
+                  itemBuilder: (BuildContext context, int index){
+                    return RNewsListItem(data[4 + index]);
+                  },
+                ),
+              )
+            ],
+          ),
+          decoration: BoxDecoration(
+            color: Colors.white,
+          ),
+        ),
+    );
   }
 }

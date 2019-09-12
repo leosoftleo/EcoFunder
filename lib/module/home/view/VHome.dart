@@ -58,9 +58,9 @@ class VHome extends StatelessWidget {
                   icon: Icon(Icons.person_outline),
                 )
               ],
-              labelColor: Colors.deepPurple,
+              labelColor: Colors.blueAccent,
               unselectedLabelColor: Colors.grey,
-              indicatorColor: Colors.deepPurple,
+              indicatorColor: Colors.blueAccent,
             ),
           )),
     );
